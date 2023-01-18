@@ -1,0 +1,28 @@
+[package]
+name = "packet-parser"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+name = "packet_parser"
+
+[features]
+# Inline all methods
+inline = []
+# Include core::fmt for deriving Debug or implementing Display
+fmt = []
+# Include the core::error:Error trait for all errors
+error_trait = ["fmt"]
+
+default = ["error_trait"]
+
+
+[dependencies]
+paste = "1.0.11"
+
+[dev-dependencies]
+
+
+[workspace]
+members = []
